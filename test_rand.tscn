@@ -1,0 +1,28 @@
+[gd_scene format=2]
+
+[node name="PnlMain" type="Panel"]
+
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_clip_content = false
+mouse_filter = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BtnTestAlgorithms" type="Button" parent="."]
+
+margin_left = 31.0
+margin_top = 21.0
+margin_right = 181.0
+margin_bottom = 60.0
+rect_clip_content = false
+mouse_filter = 0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Test Algorithms"
+flat = false
+
+
