@@ -113,6 +113,41 @@ func test_normal(rng, mean, std_dev):
 		$LstOutput.add_item(line)
 
 
+func test_exponential(rng, mean):
+	$LstOutput.add_item("")
+	$LstOutput.add_item("exponential(" + str(mean) + ")")
+	
+	var values = [ ]
+	values.resize(21)
+	
+	for i in range(-10, 11):
+		values[i+10] = 0
+
+	for i in range(sample_size):
+		var n = int(rng.exponential(mean))
+		var j = n+10
+		if j < 0:
+			j = 0
+		if j > 20:
+			j= 20
+		values[j] += 1
+
+	for i in range(-10, 11):
+		var line = ""
+		if i > 0:
+			line += "+"
+		line += str(i)
+		while line.length() < 5:
+			line += " "
+		line += "|"
+		
+		for j in range(values[i+10]/mark_size):
+			line += "#"
+
+		$LstOutput.add_item(line)
+
+
+
 func test_distributions(rng):
 	test_uniform_float(rng, 0.0, 8.0)
 	test_uniform_float(rng, 3.0, -2.0)
@@ -123,6 +158,10 @@ func test_distributions(rng):
 	test_normal(rng, -3.0, 5.0)
 	test_normal(rng, 1.0, 0.1)
 	
+	test_exponential(rng, 1.0)
+	test_exponential(rng, -1.0)
+	test_exponential(rng, 2.5)
+
 	test_uniform_int(rng, 3, 4)
 	test_uniform_int(rng, -5, 2)
 	test_uniform_int(rng, 0, 0)
