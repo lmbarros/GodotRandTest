@@ -13,7 +13,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="BtnKnuthLCG" type="Button" parent="."]
+[node name="BtnRunTest" type="Button" parent="."]
 
 margin_left = 31.0
 margin_top = 21.0
@@ -25,83 +25,8 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "KnuthLCG"
-flat = false
-
-[node name="BtnPCG32" type="Button" parent="."]
-
-margin_left = 31.0
-margin_top = 70.0
-margin_right = 181.0
-margin_bottom = 109.0
-rect_clip_content = false
-mouse_filter = 0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "PCG32"
-flat = false
-
-[node name="BtnSplitMix64" type="Button" parent="."]
-
-margin_left = 31.0
-margin_top = 119.0
-margin_right = 181.0
-margin_bottom = 158.0
-rect_clip_content = false
-mouse_filter = 0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "SplitMix64"
-flat = false
-
-[node name="BtnXoroshiro128Plus" type="Button" parent="."]
-
-margin_left = 31.0
-margin_top = 168.0
-margin_right = 181.0
-margin_bottom = 207.0
-rect_clip_content = false
-mouse_filter = 0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "Xoroshiro128+"
-flat = false
-
-[node name="BtnMT19937_64" type="Button" parent="."]
-
-margin_left = 31.0
-margin_top = 264.0
-margin_right = 181.0
-margin_bottom = 303.0
-rect_clip_content = false
-mouse_filter = 0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "MT19937-64"
-flat = false
-
-[node name="tnMT19937" type="Button" parent="."]
-
-margin_left = 31.0
-margin_top = 215.0
-margin_right = 181.0
-margin_bottom = 254.0
-rect_clip_content = false
-mouse_filter = 0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-text = "MT19937"
-flat = false
+text = "Run Test"
+flat = true
 
 [node name="LstOutput" type="ItemList" parent="."]
 
@@ -113,16 +38,6 @@ rect_clip_content = false
 mouse_filter = 2
 size_flags_vertical = 0
 
-[connection signal="pressed" from="BtnKnuthLCG" to="." method="_on_BtnKnuthLCG_pressed"]
-
-[connection signal="pressed" from="BtnPCG32" to="." method="_on_BtnPCG32_pressed"]
-
-[connection signal="pressed" from="BtnSplitMix64" to="." method="_on_BtnSplitMix64_pressed"]
-
-[connection signal="pressed" from="BtnXoroshiro128Plus" to="." method="_on_BtnXoroshiro128Plus_pressed"]
-
-[connection signal="pressed" from="BtnMT19937_64" to="." method="_on_BtnMT19937_64_pressed"]
-
-[connection signal="pressed" from="tnMT19937" to="." method="_on_tnMT19937_pressed"]
+[connection signal="pressed" from="BtnRunTest" to="." method="_on_BtnRunTest_pressed"]
 
 
